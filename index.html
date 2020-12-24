@@ -9,21 +9,21 @@
 </head>
 
 <body>
-    <header id="name">
+    <header>
         <h1>Weather Dashboard</h1>
     </header>
 
     <main>
-        <nav class="item item-1">
+        <nav id="flex-1">
             <h2>Search for a City:</h2>
 
             <div class="container">
-                <div class="row search-row">
+                <div id="search-row" class="row" >
                   <input class="col-9"></input>
                     <button class="col-1">#</button>
                 </div>
-
-            <section id="saved-city" class="container container-1">
+            </div>
+            <section id="saved-city" class="container">
                 <div class="row row-city"></div>
                 <div class="row row-city"></div>
                 <div class="row row-city"></div>
@@ -32,12 +32,12 @@
             </section>
         </nav>
 
-        <section id="main" class="item item-2">
+        <section id="flex-2">
             <section id="city">city</section>
             <h3>5-Day Forecast:</h3>
 
             <section class="card-container">
-                <div class="card-card">
+                <div id="cards">
                     <div class="card">
                         <div class="card-body">#</div>
                     </div>
