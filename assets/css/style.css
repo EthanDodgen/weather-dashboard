@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 /*General*/
 header {
@@ -34,7 +39,35 @@ main {
     border-radius: 5px;
 }
 
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	background-color:#3d94f6;
+	border-radius:0 5px 5px 0;
+	border:1px solid #337fed;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1570cd;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	background-color:#1e62d0;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
 /*Forecast*/
+h3 {
+    margin: 20px;
+}
 #flex-2 {
     flex-grow: 2;
 }
@@ -52,5 +85,6 @@ main {
 
 .card {
     padding: 80px 40px;
+    background-color: rgb(25, 115, 250);
 }
 
