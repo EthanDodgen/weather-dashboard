@@ -41,7 +41,7 @@ var displayCity = function(searchedCity) {
     var lon = searchedCity.coord.lon
     console.log(lon)
 
-    var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude={part}&appid=6149d2b1c6ef07dcbfaf0143ed91da08"
+    var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=imperial&appid=6149d2b1c6ef07dcbfaf0143ed91da08"
 
     fetch(apiUrl2).then(function(response) {
       response.json().then(function(data) {
