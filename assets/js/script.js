@@ -8,7 +8,7 @@ console.log(currentWeather)
 
 
 //event handler
-var formSubmitHandler = function(event) {
+var formSubmitHandler = function() {
     event.preventDefault()//cancels default action
 
     var cityName = nameInputEl.value.trim()
@@ -32,22 +32,28 @@ var getUserInfo = function(city) {//where does city come from and why does it wo
   })
 }
 
-//receives/saves API data??
-var displayCity = function(searchedCity) {
+//receives/saves API data, inserts lat and lon into second API call??
+var displayCity = function(searchedCity) {//where does searched city come from?
     console.log(searchedCity)//where is searchedCity coming from?
 
     var lat = searchedCity.coord.lat
     console.log(lat)
     var lon = searchedCity.coord.lon
     console.log(lon)
-
     var apiUrl2 = "https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&units=imperial&appid=6149d2b1c6ef07dcbfaf0143ed91da08"
 
-    fetch(apiUrl2).then(function(response) {
+    fetch(apiUrl2).then(function(response) {//what is the purpose in entire syntax?
       response.json().then(function(data) {
       console.log(data)
     })
   })
+
+    //displays current weather
+    currentWeather.push(searchedCity.name)
+    currentWeather.push(searchedCity.main.temp)
+    currentWeather.push(searchedCity.main.humidity)
+    currentWeather.push(searchedCity.wind.speed)
+    //currentWeather.push(searchedCity.current.uvi)
 }
 
 
@@ -58,11 +64,7 @@ var displayCity = function(searchedCity) {
 
     
 
-    //displays current weather
-    //currentWeather.push(searchedCity.name)
-    //currentWeather.push(searchedCity.main.temp)
-    //currentWeather.push(searchedCity.main.humidity)
-    //currentWeather.push(searchedCity.wind.speed)
+   
 
 
 
@@ -78,35 +80,5 @@ var displayCity = function(searchedCity) {
 
   //}
 
-
-
-
-  //var getOneCall = function() {
- 
-
-
-
-
-
-
-
 //event listener
   userFormEl.addEventListener("submit", formSubmitHandler)
-
-
-
- //next steps
-  //*obtain data needed from API and display with city
-
-  //create blank cards to be appended 
- 
-//display current weather
-
- //display Forecast
-
-//save to local storage
-
-//display to search list
-
-
-//create search history
