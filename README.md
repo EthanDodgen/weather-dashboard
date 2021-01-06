@@ -4,9 +4,9 @@
 Generate current and forcast weather for the city of your choosing
 
 ## Built With
-** HTML
-** CSS
-** JavaScript
+# HTML
+# CSS
+# JavaScript
 
 ## Website
 https://ethandodgen.github.io/weather-dashboard/
